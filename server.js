@@ -17,6 +17,7 @@ import tuitController from "./controllers/tuits-controller.js";
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 userController(app);
 tuitController(app);
 app.listen(process.env.PORT || 4000);
